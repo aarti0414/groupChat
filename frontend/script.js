@@ -11,12 +11,6 @@ const password = document.getElementById('password');
 const button = document.querySelector('.signup');
 const form = document.querySelector('.form-section');
 
-// const bodyParser = require('body-parser')
-// // parse application/x-www-form-urlencoded
-// app.use(bodyParser.urlencoded({ extended: false }))
-// // parse application/json
-// app.use(bodyParser.json())
-
 signup1.addEventListener("click", () => {
   slider.classList.add("moveslider");
   formSection.classList.add("form-section-move");
