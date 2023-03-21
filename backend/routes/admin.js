@@ -5,6 +5,6 @@ const adminRoutes = express.Router();
 const adminController = require('../controllers/admin');
 
 adminRoutes.post('/signup', adminController.signup);
-// adminRoutes.post('/login', adminController);
+adminRoutes.post('/login', adminController.login);
 
 module.exports = adminRoutes;
