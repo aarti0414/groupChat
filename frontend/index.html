@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width,
 						initial-scale=1.0">
   <title>Group Chat App</title>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -38,14 +39,16 @@
       </div>
 
       <!-- signup form -->
-      <div class="signup-box">
-        <input type="text" class="name ele" placeholder="Enter your name">
-        <input type="email" class="email ele" placeholder="youremail@email.com">
-        <input type="text" class="email ele" placeholder="Phone Number">
-        <input type=" password" class="password ele" placeholder="password">
-        <input type="password" class="password ele" placeholder="Confirm password">
+      <form action="" onsubmit="signup(event)" class="signup-box">
+        <!-- <form action="" onsubmit="signup(event)" class="form-signup"> -->
+        <input id="name" type="text" class="name ele" placeholder="Enter your name">
+        <input id="email" type="email" class="email ele" placeholder="youremail@email.com">
+        <input id="phone" type="text" class="email ele" placeholder="Phone Number">
+        <input id="password" type="password" class="password ele" placeholder="password">
+        <!-- <input type="password" class="password ele" placeholder="Confirm password"> -->
         <button class="clkbtn">Signup</button>
-      </div>
+      </form>
+
     </div>
   </div>
   <script src="script.js"></script>
