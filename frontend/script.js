@@ -63,6 +63,8 @@ function login(e) {
       if (response.status === 200) {
         localStorage.setItem('token', response.data.token);
         localStorage.setItem('name', response.data.name);
+        document.cookie = `token=${response.data.token}`;
+        window.location.href = 'chat.html'
       }
     }).catch(error => {
       console.log(error);
