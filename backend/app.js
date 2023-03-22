@@ -14,6 +14,8 @@ dotenv.config();
 const sequelize = require('./util/database');
 const adminRoutes = require('./routes/admin');
 const User = require('./models/user');
+const chatRoutes = require('./routes/chat');
+const Chat=require('./models/chat')
 
 const PORT = 4000;
 const app = express();
@@ -25,6 +27,11 @@ app.use(morgan());
 app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
+
+app.use(chatRoutes);
+
+User.hasMany(Chat);
+Chat.belongsTo(User);
 
 app.use('/admin', adminRoutes);
 

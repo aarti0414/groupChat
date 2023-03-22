@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <link rel="stylesheet" href="./chat/style.css">
-  <title>Document</title>
+  <title>Chat app</title>
 </head>
 
 <body>
@@ -53,7 +54,7 @@
 
         <div class="msg-bubble">
           <div class="msg-info">
-            <div class="msg-info-name">Sajad</div>
+            <div class="msg-info-name">TESTING </div>
             <div class="msg-info-time">12:46</div>
           </div>
 
@@ -64,8 +65,8 @@
       </div>
     </main>
 
-    <form class="msger-inputarea">
-      <input type="text" class="msger-input" placeholder="Enter your message...">
+    <form onsubmit="sendMsg(event)" id="send-conatiner" class="msger-inputarea">
+      <input type="text" class="msger-input" id="msger-input" placeholder="Enter your message...">
       <button type="submit" class="msger-send-btn">Send</button>
     </form>
   </section>

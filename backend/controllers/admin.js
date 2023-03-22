@@ -59,7 +59,7 @@ exports.login = (req, res) => {
             console.log(JSON.stringify(user));
             const jwtToken = generateAccessToken(user[0].id);
             console.log('jwtTokrn: ', jwtToken);
-            res.status(200).json({ token: jwtToken, userId: user[0].id, success: true, message: 'successfully logged in' });
+            res.status(200).json({ token: jwtToken, userId: user[0].id, name: user[0].name, success: true, message: 'successfully logged in' });
           }
           else {
             return res.status(401).json({ success: false, message: 'Wrong Password' });
